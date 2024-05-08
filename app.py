@@ -69,7 +69,7 @@ def getResponse(ints, intents_json):
                 result = random.choice(responses)
                 link_texts = []
                 for link in links_response:
-                    link_texts.append(f"{link['message']}<a href='{link['link']}' target='blank'>{link['text']}</a>")
+                    link_texts.append(f"{link['message']}<a href='{link['link']}' target='blank'>{link['text']}</a><br><img width='200' height='150' alt='.' src='{link['link']}' </img>")
                 return {"text": result + " ".join(link_texts), "link": True}
             else:
                 result = random.choice(responses)
